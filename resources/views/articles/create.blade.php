@@ -7,9 +7,8 @@
 
             <div class="w-full mx-auto mb-10">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <form method="post"
-                          action="{{ route('articles.store') }}"
-                          class="px-8  mt-6 space-y-6">
+
+                    <form method="post" action="{{ route('articles.store') }}" class="px-8  mt-6 space-y-6">
                         @csrf
 
                         <div>

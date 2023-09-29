@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="py-12">
+    <div class="py-12 bg-gray-900">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="w-full mx-auto mb-10">
                 <span class="inline text-md text-white transition-all hover:text-gray-100 font-bold uppercase">
@@ -18,13 +18,14 @@
                 </div>
             @endif
 
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h2 class="font-bold text-xl">
                         Here's a list of your articles, {{ auth()->user()->name }}
                     </h2>
 
                     <div class="pt-4">
+                        
                         @forelse($articles as $article)
                             <div>
                                 <a href="{{ route('articles.edit', $article->slug) }}"
