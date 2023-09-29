@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     $articles = Article::where('user_id', auth()->id())->paginate();
@@ -18,6 +18,7 @@ Route::get('/dashboard', function () {
 
 
 Route::resource('/articles', ArticleController::class)->only(['index', 'show']);
+Route::resource('/', ArticleController::class)->only(['index', 'show']);
 
 Route::middleware('auth')->group(function () {
 
